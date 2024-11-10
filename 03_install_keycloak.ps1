@@ -1,0 +1,1 @@
+helm install keycloak bitnami/keycloak --namespace keycloak --set service.type=NodePort --set service.nodePorts.http=30080

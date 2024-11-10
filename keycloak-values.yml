@@ -1,0 +1,25 @@
+service:
+  type: NodePort
+  # type: LoadBalancer
+  nodePorts:
+    http: 30080
+    https: 30443
+
+replicaCount: 2
+
+persistence:
+  enabled: true
+  storageClass: "your-storage-class"
+  accessModes:
+    - ReadWriteOnce
+  size: 8Gi
+
+readinessProbe:
+  enabled: true
+  initialDelaySeconds: 30
+  periodSeconds: 10
+
+livenessProbe:
+  enabled: true
+  initialDelaySeconds: 30
+  periodSeconds: 10

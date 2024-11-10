@@ -1,0 +1,1 @@
+helm upgrade keycloak bitnami/keycloak -n keycloak -f ./keycloak-values.yml
